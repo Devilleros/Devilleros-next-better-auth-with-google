@@ -1,5 +1,5 @@
 "use client";
-import { signOut } from "../../lib/auth-client";
+import { signOut, useSession } from "../../lib/auth-client";
 
 export default function Dashboard() {
   return (
@@ -28,7 +28,7 @@ export default function Dashboard() {
             Panel de Control
           </h1>
           <p className="mt-5 max-w-xl mx-auto text-xl text-gray-500">
-            Bienvenido a tu área personalizada
+            {useSession().data?.user.name}, bienvenido a tu área personalizada
           </p>
         </div>
 

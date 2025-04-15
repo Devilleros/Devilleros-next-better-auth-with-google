@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { signIn } from "../../lib/auth-client";
 
 export default function Login() {
@@ -27,6 +28,7 @@ export default function Login() {
               />
               Iniciar sesión con Google
             </button>
+            <Link href={"/"} className="text-blue-600">{`<< volver al inicio`}</Link>
           </div>
         </div>
       </div>
